@@ -8,17 +8,17 @@ These are the basic specs for “Hello, Web Servers”, broken into 5 stages. If
 
 Setup the repo and file structure, install and configure Express, and get a basic server running.
 
- - [ ] Repo (your artifact) is created on GitHub
- - [ ] Repo follows a conventional file structure for an Express.js app:
-  - [ ] package.json: standard for any Node.js app; includes package info and lists dependencies
+ - [x] Repo (your artifact) is created on GitHub
+ - [x] Repo follows a conventional file structure for an Express.js app:
+  - [x] package.json: standard for any Node.js app; includes package info and lists dependencies
   - [ ] app.js: your Express server, with all routes defined
-  - [ ] views/: for storing your Pug HTML templates
-  - [ ] public/: for storing static files like CSS and images
-  - [ ] README.md: includes overview of your repo
- - [ ] Express server can be started with $ node app.js
+  - [x] views/: for storing your Pug HTML templates
+  - [x] public/: for storing static files like CSS and images
+  - [x] README.md: includes overview of your repo
+ - [x] Express server can be started with $ node app.js
  - [ ] Server renders a page at the root route (/) that looks like the mockup but does not have any functionality - it is just a static page
- - [ ] All package dependencies are defined in package.json
- - [ ] The artifact produced is properly licensed, preferably with the MIT license
+ - [x] All package dependencies are defined in package.json
+ - [x] The artifact produced is properly licensed, preferably with the MIT license
 
 #### Stage 2
 
