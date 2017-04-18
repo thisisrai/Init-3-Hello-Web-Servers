@@ -1,7 +1,9 @@
-let express = require('express')
+const express = require('express')
+const marked = require('marked')
 const path = require('path')
 
-let app = express()
+const app = express()
+
 
 // *****For public view files e.i. css****
 app.set('view engine', 'pug')
@@ -12,3 +14,10 @@ app.get('/', function(request, response){
   response.render('index')
 })
 app.listen(3000)
+
+// let markdownString = $(document).getElementById("text-input").value;
+//
+// marked(markdownString, function (err, content) {
+//   if (err) throw err;
+//   console.log(content);
+// });

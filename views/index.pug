@@ -1,15 +1,14 @@
 doctype html
-html(lang='en')
-  head
-    link(rel='stylesheet', type='text/css', href='style.css')
-    title
-    script(type='text/javascript').
-      if (foo) bar(1 + 5)
-  body
-    h1 Pug - node template engine
-    #container.col
-      p Get on it!
-      p
-        | Pug is a terse and simple templating language with a
-        | strong focus on performance and powerful features.
-    img(src='http://www.cutestpaw.com/wp-content/uploads/2011/11/HALP.jpeg', alt='Mountain View', style='width:304px;height:228px;')
+include includes/head.pug
+.container
+  include includes/sidebar.pug
+  include includes/header.pug
+  #content
+    include includes/editor.pug
+    include includes/preview.pug
+    script.
+      function myFunction() {
+      console.log(document.getElementById("text-input").value);
+      var x = document.getElementById("text-input").value;
+      document.getElementById("preview-render-box").innerHTML = x;
+      }
