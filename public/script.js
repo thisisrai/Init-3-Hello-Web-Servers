@@ -36,7 +36,17 @@ let load = () => {
 }
 
 let createFile = () => {
-  let fileName = prompt("Please enter a file name. File name must be a string with no spaces and add .md after the name.")
+  let fileName = prompt("Please enter a file name")
+  fetch('/newfile', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'text/plain'
+    },
+    body: fileName
+  })
+  .then ( response => {
+    console.log('we did it!', response);
+  })
 }
 
 window.onload = () => {
