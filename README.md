@@ -11,12 +11,12 @@ Setup the repo and file structure, install and configure Express, and get a basi
  - [x] Repo (your artifact) is created on GitHub
  - [x] Repo follows a conventional file structure for an Express.js app:
   - [x] package.json: standard for any Node.js app; includes package info and lists dependencies
-  - [ ] app.js: your Express server, with all routes defined
+  - [x] app.js: your Express server, with all routes defined
   - [x] views/: for storing your Pug HTML templates
   - [x] public/: for storing static files like CSS and images
   - [x] README.md: includes overview of your repo
  - [x] Express server can be started with $ node app.js
- - [ ] Server renders a page at the root route (/) that looks like the mockup but does not have any functionality - it is just a static page
+ - [x] Server renders a page at the root route (/) that looks like the mockup but does not have any functionality - it is just a static page
  - [x] All package dependencies are defined in package.json
  - [x] The artifact produced is properly licensed, preferably with the MIT license
 
@@ -25,25 +25,25 @@ Setup the repo and file structure, install and configure Express, and get a basi
 Build out the template structure with Pug for a single-file editor. Don’t worry about multiple files for now, or implementing the markdown rendering.
 
 - pug is installed and set up for HTML templating
- - [ ] View template files are created in the /views subdirectory
- - [ ] Main view file is called index
- - [ ] Includes are created for the different “components” of the main view:
-  - [ ] Sidebar (shows list of files)
-  - [ ] Header (shows current filename, word count, and save button)
-  - [ ] Editor (shows markdown editor pane)
-  - [ ] Preview (shows rendered markdown)
- - [ ] CSS is organized into one or more files in the public/ directory
- - [ ] CSS declarations are well-named and formatted (consider using this small guide)
+ - [x] View template files are created in the /views subdirectory
+ - [x] Main view file is called index
+ - [x] Includes are created for the different “components” of the main view:
+  - [x] Sidebar (shows list of files)
+  - [x] Header (shows current filename, word count, and save button)
+  - [x] Editor (shows markdown editor pane)
+  - [x] Preview (shows rendered markdown)
+ - [x] CSS is organized into one or more files in the public/ directory
+ - [x] CSS declarations are well-named and formatted (consider using this small guide)
 
 #### Stage 3
 
 Setup real markdown rendering so that writing in the left panel updates the right panel, and make the “Save” button work.
 
 - marked is installed
- - [ ] Markdown text written in the “Editor” pane is rendered in the “Preview” pane automatically
- - [ ] Preview is updated every time text in the editor changes
- - [ ] Clicking the “Save” button saves the markdown text in the editor to a file in a subdirectory of the server data/
- - [ ] The markdown file in data/ is loaded and used as the starter text in the editor (in other words, the last saved text is loaded by default)
+ - [x] Markdown text written in the “Editor” pane is rendered in the “Preview” pane automatically
+ - [x] Preview is updated every time text in the editor changes
+ - [x] Clicking the “Save” button saves the markdown text in the editor to a file in a subdirectory of the server data/
+ - [x] The markdown file in data/ is loaded and used as the starter text in the editor (in other words, the last saved text is loaded by default)
 
 #### Stage 4
 
