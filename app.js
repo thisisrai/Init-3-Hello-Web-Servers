@@ -16,16 +16,21 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 app.get('/', function(request, response){
-  response.render('index')
+  fs.readdir('data', function(err, files) {
+    console.log('files', files)
+    response.render('index', { files: files })
+  })
 })
 
-// app.post('/save', function(request, response){
-//   console.log('we got', request.body);
-//   let writeStream = fs.createWriteStream('data/markdown.md')
-//   writeStream.write(request.body)
-//   writeStream.end()
-//   response.send('we posted!')
-// })
+app.post('/save', function(request, response){
+  console.log('we got', request.body);
+  body = JSON.parse(request.body)
+  let writeStream = fs.createWriteStream('data'+body.file)
+  console.log('text', body.text)
+  writeStream.write(body.text)
+  writeStream.end()
+  response.send('we posted!')
+})
 
 //new file attempt:
 app.post('/newfile', function(request, response){
@@ -36,15 +41,30 @@ app.post('/newfile', function(request, response){
   response.send('we posted!')
 })
 
-app.get('/load', function(request,response){
+// Trial stuff
+app.get('/:newfile', function(request,response){
   let str = ''
-  let readStream = fs.createReadStream('data/markdown.md')
-  readStream.on('data', function(chunk){
-    str += chunk
-  }).on('end', function(){
-    response.send(str)
+  let readStream = fs.createReadStream('data/'+request.params.newfile)
+  fs.readdir('data', function(err, files) {
+    readStream.on('data', function(chunk){
+      str += chunk
+    }).on('end', function(){
+      response.render('index', {files: files, data: str})
+    })
   })
+
+
 })
+
+// app.get('/load', function(request,response){
+//   let str = ''
+//   let readStream = fs.createReadStream('data/markdown.md')
+//   readStream.on('data', function(chunk){
+//     str += chunk
+//   }).on('end', function(){
+//     response.send(str)
+//   })
+// })
 
 app.get('*', function(request, response){
   console.log(request.url)
