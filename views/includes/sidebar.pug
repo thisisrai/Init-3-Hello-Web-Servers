@@ -2,3 +2,7 @@
   header
     | Down. Mark Down
   button(type='submit' id='new-file-button') NEW FILE
+  ul
+    each file in files
+      li
+        a(href="/"+file)=file

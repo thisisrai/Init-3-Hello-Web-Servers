@@ -49,12 +49,12 @@ Setup real markdown rendering so that writing in the left panel updates the righ
 
 Build out multiple-file functionality, and use cookies to remember the last opened file.
 
- - [ ] Users can create more than one markdown file
- - [ ] Each file has its own URL, named after its filename (for example, if the markdown file is called Todos.md, its URL would be http://localhost:3000/todos)
- - [ ] Markdown files are listed in the sidebar
- - [ ] Clicking on the “New File” button in the sidebar lets users create a new file and prompts for the file name using prompt()
- - [ ] Clicking on a file in the sidebar will navigate to the page, load the file contents into the editor, and render them in the preview
- - [ ] Markdown content can still be saved to files in data/, with one file in data/ for each file in the sidebar
+ - [x] Users can create more than one markdown file
+ - [x] Each file has its own URL, named after its filename (for example, if the markdown file is called Todos.md, its URL would be http://localhost:3000/todos)
+ - [x] Markdown files are listed in the sidebar
+ - [x] Clicking on the “New File” button in the sidebar lets users create a new file and prompts for the file name using prompt()
+ - [x] Clicking on a file in the sidebar will navigate to the page, load the file contents into the editor, and render them in the preview
+ - [x] Markdown content can still be saved to files in data/, with one file in data/ for each file in the sidebar
  - [ ] Most recently edited file is tracked using a cookie
  - [ ] When visiting the root route (/), users are redirected to the file they last edited
 
