@@ -19,9 +19,18 @@ app.get('/', function(request, response){
   response.render('index')
 })
 
-app.post('/save', function(request, response){
+// app.post('/save', function(request, response){
+//   console.log('we got', request.body);
+//   let writeStream = fs.createWriteStream('data/markdown.md')
+//   writeStream.write(request.body)
+//   writeStream.end()
+//   response.send('we posted!')
+// })
+
+//new file attempt:
+app.post('/newfile', function(request, response){
   console.log('we got', request.body);
-  let writeStream = fs.createWriteStream('data/markdown.md')
+  let writeStream = fs.createWriteStream('data/' + request.body + '.md')
   writeStream.write(request.body)
   writeStream.end()
   response.send('we posted!')
@@ -37,11 +46,9 @@ app.get('/load', function(request,response){
   })
 })
 
-// let something = '/' + fileName;
-//
-// app.get(something, function(request, response){
-//   response.render('index')
-// })
+app.get('*', function(request, response){
+  console.log(request.url)
+})
 
 
 app.listen(3000)
