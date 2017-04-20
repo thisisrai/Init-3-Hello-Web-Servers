@@ -37,5 +37,11 @@ app.get('/load', function(request,response){
   })
 })
 
+// let something = '/' + fileName;
+//
+// app.get(something, function(request, response){
+//   response.render('index')
+// })
+
 
 app.listen(3000)
