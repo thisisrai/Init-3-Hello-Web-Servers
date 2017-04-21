@@ -21,23 +21,6 @@ let saveFile = () => {
   })
 }
 
-
-let load = () => {
-  fetch('/load', {
-    method: 'get',
-    headers: {
-      'Content-Type': 'text/plain'
-    }
-  })
-  .then((response) => {
-    return response.text()
-  })
-  .then((response) => {
-    document.getElementById('text-input').value = response
-    updatePreview()
-  }).catch(console.log)
-}
-
 let createFile = () => {
   let fileName = prompt("Please enter a file name")
   fetch('/newfile', {
@@ -53,8 +36,9 @@ let createFile = () => {
 }
 
 window.onload = () => {
+  updatePreview
   document.getElementById('text-input').addEventListener('input', updatePreview)
+  document.getElementById('list').addEventListener('click', updatePreview)
   document.getElementById('button-save').addEventListener('click', saveFile)
   document.getElementById('new-file-button').addEventListener('click', createFile)
-  // load()
 }
